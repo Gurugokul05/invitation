@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="MEENAKSHI">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8A1B28"/>
+      <stop offset="100%" stop-color="#4A0A12"/>
+    </linearGradient>
+    <pattern id="kolam" width="86" height="86" patternUnits="userSpaceOnUse">
+      <path d="M43 7 L79 43 L43 79 L7 43 Z" fill="none" stroke="#E8B923" stroke-opacity="0.14" stroke-width="2"/>
+      <path d="M43 24 Q62 43 43 62 Q24 43 43 24 Z" fill="none" stroke="#E8B923" stroke-opacity="0.1" stroke-width="1.5"/>
+      <circle cx="43" cy="43" r="3" fill="#E8B923" fill-opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#kolam)"/>
+  <g fill="none" stroke="#E8B923" stroke-opacity="0.55" stroke-width="3">
+    <rect x="18" y="18" width="764" height="964" rx="20"/>
+  </g>
+  <rect x="30" y="30" width="740" height="940" rx="14" fill="none"
+        stroke="#E8B923" stroke-opacity="0.28" stroke-width="1.5"/>
+  <g fill="#FFF8E7" fill-opacity="0.15">
+    <circle cx="400" cy="355" r="108"/>
+    <path d="M184 660 C 192 450, 608 450, 616 660 Z"/>
+  </g>
+  <circle cx="400" cy="355" r="160" fill="none" stroke="#E8B923" stroke-opacity="0.35" stroke-width="2"/>
+
+  <text x="400" y="916" text-anchor="middle" font-family="Cinzel, Georgia, serif"
+        font-size="66" fill="#FFF8E7" fill-opacity="0.94" letter-spacing="5">MEENAKSHI</text>
+  <text x="400" y="954" text-anchor="middle" font-family="Georgia, serif"
+        font-size="34" fill="#E8B923" fill-opacity="0.85" letter-spacing="3">BRIDE</text>
+</svg>

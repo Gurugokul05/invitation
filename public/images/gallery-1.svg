@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="PHOTO 1">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6B0F1A"/>
+      <stop offset="100%" stop-color="#B3122D"/>
+    </linearGradient>
+    <pattern id="kolam" width="86" height="86" patternUnits="userSpaceOnUse">
+      <path d="M43 7 L79 43 L43 79 L7 43 Z" fill="none" stroke="#E8B923" stroke-opacity="0.14" stroke-width="2"/>
+      <path d="M43 24 Q62 43 43 62 Q24 43 43 24 Z" fill="none" stroke="#E8B923" stroke-opacity="0.1" stroke-width="1.5"/>
+      <circle cx="43" cy="43" r="3" fill="#E8B923" fill-opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#kolam)"/>
+  <g fill="none" stroke="#E8B923" stroke-opacity="0.55" stroke-width="3">
+    <rect x="18" y="18" width="764" height="964" rx="20"/>
+  </g>
+  <rect x="30" y="30" width="740" height="940" rx="14" fill="none"
+        stroke="#E8B923" stroke-opacity="0.28" stroke-width="1.5"/>
+  <path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(0 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(30 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(60 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(90 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(120 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(150 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(180 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(210 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(240 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(270 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(300 400 400)"/><path d="M400 324 C 463.84 232.79999999999998, 430.4 126.39999999999998, 400 103.60000000000002 C 369.6 126.39999999999998, 336.16 232.79999999999998, 400 324 Z"
+        fill="#E8B923" fill-opacity="0.12" stroke="#E8B923" stroke-opacity="0.42" stroke-width="2"
+        transform="rotate(330 400 400)"/>
+  <g fill="none" stroke="#E8B923">
+    <circle cx="400" cy="400" r="342" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="3 9"/>
+    <circle cx="400" cy="400" r="205.20000000000002" stroke-opacity="0.22" stroke-width="1.6"/>
+    <circle cx="400" cy="400" r="91.2" stroke-opacity="0.5" stroke-width="2"/>
+  </g>
+  <circle cx="400" cy="400" r="45.6" fill="#E8B923" fill-opacity="0.35"/>
+  <g fill="#FFF8E7" fill-opacity="0.22">
+    <circle cx="4.800000000000011" cy="720" r="6"/>
+    <circle cx="795.2" cy="720" r="6"/>
+    <circle cx="400" cy="780" r="5"/>
+  </g>
+
+  <text x="400" y="916" text-anchor="middle" font-family="Cinzel, Georgia, serif"
+        font-size="66" fill="#FFF8E7" fill-opacity="0.94" letter-spacing="5">PHOTO 1</text>
+  <text x="400" y="954" text-anchor="middle" font-family="Georgia, serif"
+        font-size="34" fill="#E8B923" fill-opacity="0.85" letter-spacing="3">REPLACE WITH YOUR PHOTO</text>
+</svg>

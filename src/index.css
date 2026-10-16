@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream font-body text-ink antialiased;
+    /* Silk-saree weave: two soft warm gradients over cream */
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(232, 185, 35, 0.14), transparent 60%),
+      radial-gradient(circle at 50% 100%, rgba(107, 15, 26, 0.08), transparent 55%),
+      repeating-linear-gradient(
+        45deg,
+        rgba(201, 162, 39, 0.05) 0px,
+        rgba(201, 162, 39, 0.05) 1px,
+        transparent 1px,
+        transparent 6px
+      );
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+
+  /* Tamil script needs generous line height + a touch of letter spacing */
+  h1,
+  h2,
+  h3 {
+    @apply font-heading leading-[1.55];
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  label,
+  input,
+  select,
+  button {
+    line-height: 1.75;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-turmeric ring-offset-2 ring-offset-cream;
+  }
+
+  ::selection {
+    @apply bg-turmeric/40 text-maroon-deep;
+  }
+
+  /* Slim maroon scrollbar (desktop only) */
+  @media (min-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      @apply bg-cream-dark;
+    }
+    ::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-maroon/50;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      @apply bg-maroon;
+    }
+  }
+}
+
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+@layer components {
+  /* --- Gold zari border that runs across the top + bottom of every section */
+  .zari-line {
+    @apply relative h-[7px] w-full;
+    background-image: repeating-linear-gradient(
+      90deg,
+      #c9a227 0px,
+      #c9a227 3px,
+      #e8b923 3px,
+      #e8b923 7px,
+      #9a7a17 7px,
+      #9a7a17 9px,
+      #e4c868 9px,
+      #e4c868 12px
+    );
+    box-shadow: 0 0 12px rgba(201, 162, 39, 0.45);
+  }
+
+  /* --- Temple-arch (gopuram) shaped card / photo frame */
+  .gopuram-frame {
+    @apply relative overflow-hidden border-[3px] border-gold/80 bg-cream-dark shadow-card;
+    border-radius: 999px 999px 18px 18px;
+  }
+
+  /* --- Ornate double border card */
+  .ornate-card {
+    @apply relative rounded-2xl border border-gold/50 bg-white/60 shadow-card backdrop-blur-sm;
+  }
+  .ornate-card::after {
+    content: '';
+    @apply pointer-events-none absolute inset-[5px] rounded-xl border border-gold/30;
+  }
+
+  /* --- Primary gold button */
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           font-body text-base font-semibold text-maroon-deep shadow-gold
+           transition-transform duration-200 active:scale-[0.97];
+    background-image: linear-gradient(140deg, #e8b923 0%, #c9a227 45%, #e4c868 100%);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold
+           bg-cream/70 px-6 py-3 text-base font-semibold text-maroon
+           transition-colors duration-200 hover:bg-turmeric/25 active:scale-[0.97];
+  }
+
+  /* --- Gold shimmering heading text */
+  .gold-text {
+    background-image: linear-gradient(
+      100deg,
+      #9a7a17 0%,
+      #c9a227 20%,
+      #f6e7a8 42%,
+      #e8b923 55%,
+      #c9a227 75%,
+      #9a7a17 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  /* --- Section wrapper: keeps consistent vertical rhythm */
+  .section-shell {
+    @apply relative mx-auto w-full max-w-3xl px-5 py-14 sm:px-8 sm:py-20;
+  }
+
+  /* --- Small caps eyebrow label */
+  .eyebrow {
+    @apply font-display text-[0.68rem] uppercase tracking-widest2 text-gold-dark sm:text-xs;
+  }
+
+  /* --- Decorative divider rule with a diamond in the middle */
+  .rule-diamond {
+    @apply flex items-center justify-center gap-3 text-gold;
+  }
+  .rule-diamond::before,
+  .rule-diamond::after {
+    content: '';
+    @apply h-px flex-1;
+    background-image: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.85), transparent);
+  }
+}
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+@layer utilities {
+  .font-tamil {
+    font-feature-settings: 'kern' 1;
+    line-height: 1.8;
+  }
+
+  .text-shadow-gold {
+    text-shadow: 0 1px 0 rgba(255, 248, 231, 0.8), 0 2px 10px rgba(107, 15, 26, 0.25);
+  }
+
+  /* Safe areas for iPhone notch / home indicator */
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+  }
+  .pt-safe {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 0.5rem);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION — kill every animation and parallax
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .gold-text {
+    animation: none;
+    background-position: 0 center;
+  }
+}

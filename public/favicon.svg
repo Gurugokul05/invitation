@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8A1B28"/><stop offset="100%" stop-color="#4A0A12"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <path d="M32 9 L55 32 L32 55 L9 32 Z" fill="none" stroke="#C9A227" stroke-width="2.4"/>
+  <path d="M32 18 Q46 32 32 46 Q18 32 32 18 Z" fill="#E8B923" fill-opacity="0.25" stroke="#E8B923" stroke-width="1.6"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Noto Serif Tamil, serif" font-size="26" fill="#E8B923">உ</text>
+</svg>
