@@ -86,8 +86,10 @@ export const opening = {
   slokaMeaning: 'Salutations to Lord Ganesha',
   cta: 'அழைப்பிதழைத் திறக்க',
   ctaEnglish: 'Tap to open the invitation',
-  // Shown under the button so guests know the nadaswaram starts on tap.
-  hint: 'இசையுடன் திறக்கவும்',
+  // The music pill under the button. Tapping it switches the nadaswaram on or
+  // off BEFORE the doors open — it never opens the invitation itself.
+  musicOn: 'இசையுடன் திறக்கவும்',
+  musicOff: 'இசை இல்லாமல் திறக்கவும்',
 };
 
 /* ------------------------------------------------------ INVITATION TEXT */

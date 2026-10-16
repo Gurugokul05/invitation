@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
+import { useId } from 'react';
 
 /* ------------------------------------------------------------------- LOTUS */
 export function Lotus({ className = '', draw = true }) {
@@ -55,9 +56,16 @@ export function Paisley({ className = '', flip = false }) {
 
 /* ---------------------------------------------------------- JASMINE GARLAND */
 /**
- * A strung jasmine (malligai) garland. Tiles horizontally like the toran.
+ * A strung jasmine (malligai) garland.
+ *
+ * Default: one 68x34 motif, scaled to whatever box you give it.
+ * `tile`: repeats the motif across the full width at a fixed `height`, so the
+ * garland's thickness no longer scales with viewport width — it can't balloon
+ * on tablets and collide with nearby content.
  */
-export function JasmineGarland({ className = '', flip = false }) {
+export function JasmineGarland({ className = '', flip = false, tile = false, height = 34 }) {
+  const patternId = `garland-${useId().replace(/:/g, '')}`;
+
   const buds = [
     { x: 6, y: 16, r: 4.2 },
     { x: 20, y: 22, r: 5 },
@@ -66,14 +74,8 @@ export function JasmineGarland({ className = '', flip = false }) {
     { x: 62, y: 16, r: 4.2 },
   ];
 
-  return (
-    <svg
-      viewBox="0 0 68 34"
-      className={className}
-      style={flip ? { transform: 'scaleX(-1)' } : undefined}
-      aria-hidden="true"
-      role="presentation"
-    >
+  const motif = (
+    <>
       <path
         d="M0 12 C 17 26, 51 26, 68 12"
         fill="none"
@@ -88,6 +90,40 @@ export function JasmineGarland({ className = '', flip = false }) {
           <circle cx={b.x} cy={b.y} r={b.r * 0.42} fill="#EEDFBF" />
         </g>
       ))}
+    </>
+  );
+
+  const flipStyle = flip ? { transform: 'scaleX(-1)' } : undefined;
+
+  if (tile) {
+    return (
+      <svg
+        width="100%"
+        height={height}
+        className={className}
+        style={flipStyle}
+        aria-hidden="true"
+        role="presentation"
+      >
+        <defs>
+          <pattern id={patternId} width="68" height="34" patternUnits="userSpaceOnUse">
+            {motif}
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill={`url(#${patternId})`} />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      viewBox="0 0 68 34"
+      className={className}
+      style={flipStyle}
+      aria-hidden="true"
+      role="presentation"
+    >
+      {motif}
     </svg>
   );
 }

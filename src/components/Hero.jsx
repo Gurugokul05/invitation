@@ -123,13 +123,17 @@ export default function Hero() {
         </motion.div>
 
         {/* ------------------------------------------ glowing lamp */}
-        <motion.div
-          className="pointer-events-none absolute bottom-0 left-1/2 z-10 -translate-x-1/2"
-          style={reduced ? undefined : { y: lampY }}
+        {/* Centring lives on this plain wrapper. The motion child carries the
+            parallax transform, and Framer writes `transform: none` inline at
+            rest, which would otherwise cancel a Tailwind -translate-x-1/2. */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex justify-center"
           aria-hidden="true"
         >
-          <Kuthuvilakku className="h-24 w-auto opacity-95 sm:h-36" />
-        </motion.div>
+          <motion.div style={reduced ? undefined : { y: lampY }}>
+            <Kuthuvilakku className="h-24 w-auto opacity-95 sm:h-36" />
+          </motion.div>
+        </div>
       </div>
     </Section>
   );
