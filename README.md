@@ -31,21 +31,21 @@ npm run lint
 This is the only file you need to touch. It is grouped into clearly labelled
 blocks, each with comments:
 
-| Block        | What it controls                                                    |
-| ------------ | ------------------------------------------------------------------- |
-| `music`      | Background nadaswaram track (or `''` to remove the music button)     |
-| `meta`       | Live site URL + browser tab title                                    |
-| `muhurtham`  | The auspicious moment — **drives the countdown timer**               |
-| `couple`     | Bride & groom names, parents, one-line intro, photos                 |
-| `hero`       | Title, tagline, opening blessing                                     |
-| `opening`    | Door-screen mantra, button label, sound hint                         |
-| `invitation` | The invitation paragraph, translation and host family                |
-| `countdown`  | Timer labels, Tamil-numeral toggle, "the big day is here" message     |
-| `events`     | The ceremony timeline (title, date, time, venue, icon)                |
-| `venue`      | Tamil + English address, phone, Google Maps embed + directions        |
-| `gallery`    | Photo list — add or remove as many as you like                        |
-| `rsvp`       | WhatsApp number and the two prefilled messages                        |
-| `footer`     | Blessing, family names, WhatsApp share text                           |
+| Block        | What it controls                                                  |
+| ------------ | ----------------------------------------------------------------- |
+| `music`      | Background nadaswaram track (or `''` to remove the music button)  |
+| `meta`       | Live site URL + browser tab title                                 |
+| `muhurtham`  | The auspicious moment — **drives the countdown timer**            |
+| `couple`     | Bride & groom names, parents, one-line intro, photos              |
+| `hero`       | Title, tagline, opening blessing                                  |
+| `opening`    | Door-screen mantra, button label, sound hint                      |
+| `invitation` | The invitation paragraph, translation and host family             |
+| `countdown`  | Timer labels, Tamil-numeral toggle, "the big day is here" message |
+| `events`     | The ceremony timeline (title, date, time, venue, icon)            |
+| `venue`      | Tamil + English address, phone, Google Maps embed + directions    |
+| `gallery`    | Photo list — add or remove as many as you like                    |
+| `rsvp`       | WhatsApp number and the two prefilled messages                    |
+| `footer`     | Blessing, family names, WhatsApp share text                       |
 
 ### Bilingual text
 
@@ -57,8 +57,8 @@ you only want Tamil.
 
 ```js
 export const muhurtham = {
-  iso: '2027-05-13T09:15:00+05:30',   // keep the +05:30 IST offset
-  display: { tamil: '…', english: '…' },
+  iso: "2027-05-13T09:15:00+05:30", // keep the +05:30 IST offset
+  display: { tamil: "…", english: "…" },
 };
 ```
 
@@ -122,7 +122,10 @@ replace every `https://YOUR-DOMAIN.vercel.app` with your real URL and point
 `og:image` at your own image:
 
 ```html
-<meta property="og:image" content="https://your-domain.vercel.app/og-image.jpg" />
+<meta
+  property="og:image"
+  content="https://sakthikumar-invitation.vercel.app/og-image.jpg"
+/>
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 ```
@@ -144,7 +147,7 @@ No configuration needed — Vercel detects Vite automatically.
 2. On [vercel.com](https://vercel.com) → **Add New… → Project** → import the repo.
 3. Framework preset: **Vite**. Build command `npm run build`, output directory
    `dist`. Leave the rest as-is.
-4. **Deploy**, then add your custom domain under *Settings → Domains*.
+4. **Deploy**, then add your custom domain under _Settings → Domains_.
 5. Update the `og:*` URLs in `index.html` (step 4 above) and redeploy.
 
 **Option B — CLI**

@@ -83,7 +83,7 @@ export default function PillayarSuzhi({ className = '', draw = true }) {
 
       <motion.span
         className="gold-text relative font-tamil font-semibold leading-none"
-        style={{ fontSize: '0.8em' }}
+        style={{ fontSize: '0.8em', y: '-0.35em' }}
         initial={shouldDraw ? { opacity: 0, scale: 0.7 } : false}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}

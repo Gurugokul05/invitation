@@ -8,7 +8,6 @@ import Couple from './components/Couple.jsx';
 import Countdown from './components/Countdown.jsx';
 import Events from './components/Events.jsx';
 import Venue from './components/Venue.jsx';
-import Gallery from './components/Gallery.jsx';
 import Rsvp from './components/Rsvp.jsx';
 import Footer from './components/Footer.jsx';
 import useBackgroundMusic from './hooks/useBackgroundMusic.js';
@@ -71,7 +70,6 @@ export default function App() {
         <Countdown />
         <Events />
         <Venue />
-        <Gallery />
         <Rsvp />
         <Footer />
       </main>

@@ -31,43 +31,44 @@ export const meta = {
   // Set this to your live URL after deploying to Vercel. Also update the
   // matching <meta og:*> tags in index.html.
   siteUrl: 'https://YOUR-DOMAIN.vercel.app',
-  title: 'அன்புடன் அழைக்கிறோம் — Arjun weds Meenakshi',
+  title: 'அன்புடன் அழைக்கிறோம் — SakthiKumar weds Aruneswari',
 };
 
 /* --------------------------------------------------------------- THE DATE */
 // Muhurtham (the exact auspicious moment). Drives the countdown timer.
 // Keep the "+05:30" (IST) offset so the countdown is right for guests abroad.
 export const muhurtham = {
-  iso: '2027-05-13T09:15:00+05:30',
+  iso: '2026-11-01T10:30:00+05:30',
   // Shown in the hero and countdown, exactly as written.
+  // The Aippasi day number is an estimate — confirm it from your panchangam.
   display: {
-    tamil: 'சித்திரை மாதம் 30-ஆம் தேதி (13.05.2027) வியாழக்கிழமை',
-    english: 'Thursday, 13 May 2027 · 09:15 AM IST',
+    tamil: 'ஐப்பசி மாதம் 15-ஆம் தேதி (01.11.2026) ஞாயிற்றுக்கிழமை',
+    english: 'Sunday, 1 November 2026 · 10:30 AM IST',
   },
 };
 
 /* ---------------------------------------------------------------- COUPLE */
 export const couple = {
   groom: {
-    nameTamil: 'அர்ஜுன்',
-    nameEnglish: 'Arjun',
-    // Shown as "வி. ரமேஷ் & லதா ரமேஷ் அவர்களின் மகன்"
-    parents: 'வி. ரமேஷ் & லதா ரமேஷ் அவர்களின் மகன்',
-    parentsEnglish: 'Son of Mr. V. Ramesh & Mrs. Latha Ramesh',
-    line: 'சென்னை · மென்பொருள் பொறியாளர்',
-    photo: '/images/groom.svg',
-    photoAlt: 'Arjun',
+    nameTamil: 'எம். சக்திகுமார்',
+    nameEnglish: 'M. SakthiKumar',
+    // Still a placeholder — replace with the groom's actual parents.
+    parents: 'எஸ். மகாராஜன் & எம். சபரிமணி, எம். தங்கமாரி அவர்களின் மகன்',
+    parentsEnglish: 'Son of Mr. S. Maharajan & Mrs. M. Sabarimani,Mrs. M. Thangamari',
+    line: '',
   },
   bride: {
-    nameTamil: 'மீனாக்ஷி',
-    nameEnglish: 'Meenakshi',
-    parents: 'சு. கணேசன் & கமலா கணேசன் அவர்களின் மகள்',
-    parentsEnglish: 'Daughter of Mr. S. Ganesan & Mrs. Kamala Ganesan',
-    line: 'மதுரை · கட்டிடக் கலைஞர்',
-    photo: '/images/bride.svg',
-    photoAlt: 'Meenakshi',
+    nameTamil: 'எஸ். அருணேஸ்வரி',
+    nameEnglish: 'S. Aruneswari',
+    // Still a placeholder — replace with the bride's actual parents.
+    parents: 'அ. சேங்கை & சே. நித்யா அவர்களின் மகள்',
+    parentsEnglish: 'Daughter of Mr. A. Sengai & Mrs. S. Nithiya',
+    line: '',
   },
-  // "bride-first" or "groom-first" — controls the order of the couple cards.
+  // One shared couple photo, shown at the top of the section.
+  photo: '/images/couple.svg',
+  photoAlt: 'M. SakthiKumar & S. Aruneswari',
+  // "bride-first" or "groom-first" — controls the order of the names and details.
   order: 'groom-first',
 };
 
@@ -77,13 +78,13 @@ export const hero = {
   tagline: 'இரு மனம் இணையும் திருநாள்',
   taglineEnglish: 'The auspicious day two hearts become one',
   // Big line under the names.
-  blessing: 'ஸ்ரீ கணேசாய நமஹ',
+  blessing: 'ஸ்ரீ தண்டீஸ்வர அய்யனார் துணை',
 };
 
 /* -------------------------------------------------------------- OPENING */
 export const opening = {
-  sloka: 'ஸ்ரீ கணேசாய நமஹ',
-  slokaMeaning: 'Salutations to Lord Ganesha',
+  sloka: 'ஸ்ரீ தண்டீஸ்வர அய்யனார் துணை',
+  slokaMeaning: 'Salutations to Thandisvara Ayyanar',
   cta: 'அழைப்பிதழைத் திறக்க',
   ctaEnglish: 'Tap to open the invitation',
   // The music pill under the button. Tapping it switches the nadaswaram on or
@@ -104,16 +105,14 @@ export const invitation = {
   ],
   // The family signing the invitation.
   hosts: {
-    tamil: 'வி. ரமேஷ் & லதா ரமேஷ்',
-    english: 'V. Ramesh & Latha Ramesh',
+    tamil: 'எஸ். மகாராஜன் & எம். சபரிமணி, எம். தங்கமாரி',
+    english: 'S. Maharajan & M. Sabarimani, M. Thangamari',
   },
 };
 
 /* -------------------------------------------------------------- COUNTDOWN */
 export const countdown = {
   heading: { tamil: 'முகூர்த்தத்திற்கு', english: 'Countdown to the Muhurtham' },
-  // Show a Tamil-numeral toggle button next to the timer.
-  allowTamilNumerals: true,
   labels: {
     days: 'நாட்கள்',
     hours: 'மணி',
@@ -138,97 +137,53 @@ export const events = [
     id: 'nichayathartham',
     icon: 'ring',
     title: { tamil: 'நிச்சயதார்த்தம்', english: 'Nichayathartham · Engagement' },
-    date: '11 May 2027',
-    tamilDate: 'சித்திரை 28, செவ்வாய்க்கிழமை',
-    time: 'காலை 10:00 மணி',
-    timeEnglish: '10:00 AM',
-    venue: 'இல்லம், அண்ணா நகர், சென்னை',
-  },
-  {
-    id: 'manjal-neeratu',
-    icon: 'turmeric',
-    title: { tamil: 'மஞ்சள் நீராட்டு', english: 'Manjal Neeratu' },
-    date: '12 May 2027',
-    tamilDate: 'சித்திரை 29, புதன்கிழமை',
-    time: 'காலை 7:00 மணி',
-    timeEnglish: '7:00 AM',
-    venue: 'இல்லம், அண்ணா நகர், சென்னை',
-  },
-  {
-    id: 'mehendi',
-    icon: 'mehendi',
-    title: { tamil: 'மெஹந்தி', english: 'Mehendi' },
-    date: '12 May 2027',
-    tamilDate: 'சித்திரை 29, புதன்கிழமை',
-    time: 'மாலை 5:00 மணி',
-    timeEnglish: '5:00 PM',
-    venue: 'ஸ்ரீ லக்ஷ்மி திருமண மண்டபம், சென்னை',
-  },
-  {
-    id: 'reception',
-    icon: 'garland',
-    title: { tamil: 'வரவேற்பு', english: 'Reception' },
-    date: '12 May 2027',
-    tamilDate: 'சித்திரை 29, புதன்கிழமை',
-    time: 'இரவு 7:00 மணி',
-    timeEnglish: '7:00 PM',
-    venue: 'ஸ்ரீ லக்ஷ்மி திருமண மண்டபம், சென்னை',
+    date: '31 October 2026',
+    tamilDate: 'ஐப்பசி 14, சனிக்கிழமை',
+    time: 'மாலை 7:15–8:47 மணி',
+    timeEnglish: '7:15–8:47 PM',
+    venue: 'ஏ.எஸ். அபிஷேக் திருமண மஹால், குருக்கல்பட்டி',
   },
   {
     id: 'muhurtham',
     icon: 'lamp',
     title: { tamil: 'முகூர்த்தம்', english: 'Muhurtham' },
-    date: '13 May 2027',
-    tamilDate: 'சித்திரை 30, வியாழக்கிழமை',
-    time: 'காலை 9:15 மணி',
-    timeEnglish: '9:15 AM',
-    venue: 'ஸ்ரீ லக்ஷ்மி திருமண மண்டபம், சென்னை',
+    date: '1 November 2026',
+    tamilDate: 'ஐப்பசி 15, ஞாயிற்றுக்கிழமை',
+    time: 'காலை 10:30 மணி',
+    timeEnglish: '10:30 AM',
+    venue: 'ஏ.எஸ். அபிஷேக் திருமண மஹால், குருக்கல்பட்டி',
   },
   {
     id: 'sappadu',
     icon: 'feast',
     title: { tamil: 'விருந்து', english: 'Wedding Feast' },
-    date: '13 May 2027',
-    tamilDate: 'சித்திரை 30, வியாழக்கிழமை',
-    time: 'பகல் 12:00 மணி',
-    timeEnglish: '12:00 PM',
-    venue: 'இலை விருந்து · ஸ்ரீ லக்ஷ்மி திருமண மண்டபம்',
+    date: '1 November 2026',
+    tamilDate: 'ஐப்பசி 15, ஞாயிற்றுக்கிழமை',
+    time: 'பகல் 12:30 மணி',
+    timeEnglish: '12:30 PM',
+    venue: 'இலை விருந்து · ஏ.எஸ். அபிஷேக் திருமண மஹால்',
   },
 ];
 
 /* ------------------------------------------------------------------ VENUE */
 export const venue = {
   heading: { tamil: 'மண்டபம்', english: 'Venue' },
-  name: 'ஸ்ரீ லக்ஷ்மி திருமண மண்டபம்',
-  nameEnglish: 'Sri Lakshmi Thirumana Mandapam',
+  name: 'ஏ.எஸ். அபிஷேக் திருமண மஹால்',
+  nameEnglish: 'AS Abishek Marriage Mahal',
   // Shown line by line.
-  addressTamil: ['12, 2வது தெரு, அண்ணா நகர் மேற்கு', 'சென்னை – 600 040, தமிழ்நாடு'],
-  addressEnglish: ['12, 2nd Street, Anna Nagar West', 'Chennai – 600 040, Tamil Nadu'],
-  phone: '+91 98765 43210',
-  // Google Maps embed URL. Replace the `q=` query with your venue pincode/name.
-  // Works without an API key.
-  mapEmbed:
-    'https://www.google.com/maps?q=Sri+Lakshmi+Thirumana+Mandapam+Anna+Nagar+Chennai&output=embed',
-  // "Get Directions" destination — keep it URL-encoded.
-  mapDirections:
-    'https://www.google.com/maps/dir/?api=1&destination=Sri%20Lakshmi%20Thirumana%20Mandapam%2C%20Anna%20Nagar%20West%2C%20Chennai',
+  addressTamil: ['எஸ்.எச்-41, புளியங்குடி – திருநெல்வேலி சாலை', 'குருக்கல்பட்டி, திருநெல்வேலி – 627 953', 'தமிழ்நாடு'],
+  addressEnglish: ['SH-41, Puliangudi – Tirunelveli Road', 'Kurukkal Patti, Tirunelveli – 627 953', 'Tamil Nadu'],
+  // Placeholder — put the family's contact number here.
+  phone: '+91 63857 80907',
+  // Coordinates taken from the venue's own Google Maps listing:
+  // https://maps.app.goo.gl/atSdCUX2DLYpbdkf6
+  // A maps.app.goo.gl short link cannot be used as an iframe src, so the embed
+  // uses the resolved lat/lng instead. Works without an API key.
+  mapEmbed: 'https://www.google.com/maps?q=9.104674,77.585337&z=16&output=embed',
+  // "Get Directions" destination — same exact pin.
+  mapDirections: 'https://www.google.com/maps/dir/?api=1&destination=9.104674%2C77.585337',
   note: 'மண்டபத்தில் வாகன நிறுத்த வசதி உள்ளது',
   noteEnglish: 'Car parking available on the premises',
-};
-
-/* ---------------------------------------------------------------- GALLERY */
-// Photos are lazy-loaded. Add as many as you like — the grid auto-flows.
-export const gallery = {
-  heading: { tamil: 'நினைவுகள்', english: 'Our Moments' },
-  photos: [
-    { src: '/images/gallery-1.svg', alt: 'Pre-wedding photo 1' },
-    { src: '/images/gallery-2.svg', alt: 'Pre-wedding photo 2' },
-    { src: '/images/gallery-3.svg', alt: 'Pre-wedding photo 3' },
-    { src: '/images/gallery-4.svg', alt: 'Pre-wedding photo 4' },
-    { src: '/images/gallery-5.svg', alt: 'Pre-wedding photo 5' },
-    { src: '/images/gallery-6.svg', alt: 'Pre-wedding photo 6' },
-  ],
-  hint: 'படத்தைத் தொட்டு பெரிதாக்கவும்',
 };
 
 /* ------------------------------------------------------------------- RSVP */
@@ -237,13 +192,13 @@ export const rsvp = {
   intro: 'தங்கள் வருகையை உறுதிப்படுத்தி எங்களை மகிழ்விக்கவும்.',
   introEnglish: 'Please confirm your attendance so we can plan the feast.',
   // WhatsApp number in international format, digits only (no +, no spaces).
-  whatsappNumber: '919876543210',
+  whatsappNumber: '6385780907',
   // Two separate messages so a declining guest doesn't get asked for a head
   // count. Placeholders: {name} {guests} {side}
   messageYes:
-    'வணக்கம்! நான் {name}. {side} திருமணத்திற்கு வருகை தருகிறேன். எங்கள் குடும்பத்திலிருந்து {guests} பேர் வருவோம். 🙏',
+    'வணக்கம்! நான் {name}. {side} திருமணத்திற்கு வருகை தருகிறேன். எங்கள் குடும்பத்திலிருந்து {guests} பேர் வருவோம்.',
   messageNo:
-    'வணக்கம்! நான் {name}. {side} திருமணத்திற்கு வருகை தர இயலவில்லை. மனமார்ந்த வாழ்த்துகள். 🙏',
+    'வணக்கம்! நான் {name}. {side} திருமணத்திற்கு வருகை தர இயலவில்லை. மனமார்ந்த வாழ்த்துகள்.',
   labels: {
     name: 'தங்கள் பெயர்',
     namePlaceholder: 'எ.கா. ராமன் & குடும்பம்',
@@ -276,11 +231,11 @@ export const footer = {
   blessingEnglish: 'Your presence is our greatest joy',
   regards: 'இப்படிக்கு',
   regardsEnglish: 'With regards',
-  families: ['வி. ரமேஷ் குடும்பம்', 'சு. கணேசன் குடும்பம்'],
-  familiesEnglish: ['V. Ramesh Family', 'S. Ganesan Family'],
+  families: ['எஸ். மகாராஜன்', 'அ. சேங்கை'],
+  familiesEnglish: ['S. Maharajan', 'A. Sengai'],
   // Used by the WhatsApp "share this invitation" button.
   shareText:
-    '🙏 அர்ஜுன் & மீனாக்ஷி திருமண அழைப்பிதழ் — 13 மே 2027, சென்னை. அழைப்பிதழை இங்கே பார்க்கவும்:',
+    '🙏 சக்திகுமார் & அருணேஸ்வரி திருமண அழைப்பிதழ் — 1 நவம்பர் 2026, குருக்கல்பட்டி. அழைப்பிதழை இங்கே பார்க்கவும்:',
   credits: 'Made with love, for our family',
 };
 
@@ -295,7 +250,6 @@ export default {
   countdown,
   events,
   venue,
-  gallery,
   rsvp,
   footer,
 };

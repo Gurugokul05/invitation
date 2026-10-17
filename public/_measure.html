@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+<iframe id="f" src="/" style="width:900px;height:900px;border:0"></iframe>
+<pre id="out">pending</pre>
+<script>
+const f = document.getElementById('f');
+f.addEventListener('load', async () => {
+  const w = f.contentWindow, d = f.contentDocument;
+  try { await d.fonts.ready; } catch (e) {}
+
+  const inkExtents = (fs, weight, family) => {
+    const pad = 60;
+    const c = d.createElement('canvas');
+    c.width = Math.ceil(fs * 1.7) + pad * 2;
+    c.height = Math.ceil(fs * 2.2) + pad * 2;
+    const ctx = c.getContext('2d');
+    ctx.font = weight + ' ' + fs + 'px ' + family;
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillStyle = '#fff';
+    const B = Math.ceil(fs * 1.3) + pad;
+    ctx.fillText('\u0B89', pad, B);
+    const img = ctx.getImageData(0, 0, c.width, c.height).data;
+    let minY = Infinity, maxY = -Infinity;
+    for (let y = 0; y < c.height; y++) {
+      for (let x = 0; x < c.width; x++) {
+        if (img[(y * c.width + x) * 4 + 3] > 8) { if (y < minY) minY = y; if (y > maxY) maxY = y; }
+      }
+    }
+    return { above: B - minY, below: maxY - B };
+  };
+
+  const probeBox = (E, extra) => {
+    const box = d.createElement('div');
+    box.className = 'relative grid h-[1em] w-[1em] place-items-center';
+    box.style.cssText = 'position:fixed;left:-9999px;top:0;font-size:' + E + 'px;';
+    const g = d.createElement('span');
+    g.className = 'gold-text relative font-tamil font-semibold leading-none';
+    g.style.cssText = 'font-size:0.8em;' + (extra || '');
+    g.textContent = '\u0B89';
+    box.appendChild(g);
+    d.body.appendChild(box);
+
+    const probe = d.createElement('span');
+    probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline;';
+    g.appendChild(probe);
+    const baselineY = probe.getBoundingClientRect().bottom;
+    probe.remove();
+
+    const br = box.getBoundingClientRect();
+    const cs = w.getComputedStyle(g);
+    const fs = parseFloat(cs.fontSize);
+    const ink = inkExtents(fs, cs.fontWeight, cs.fontFamily);
+    const inkTop = baselineY - ink.above;
+    const inkBottom = baselineY + ink.below;
+    const boxCenter = br.top + br.height / 2;
+    const inkCenter = (inkTop + inkBottom) / 2;
+    const need = boxCenter - inkCenter;
+    return {
+      boxH: +br.height.toFixed(2), spanH: +g.getBoundingClientRect().height.toFixed(2),
+      lineHeight: cs.lineHeight, inkAbove: +ink.above.toFixed(2), inkBelow: +ink.below.toFixed(2),
+      dyNeedPx: +need.toFixed(3),
+      dyNeed_emOfBox: +(need / br.height).toFixed(4),
+      dyNeed_emOfSpan: +(need / fs).toFixed(4),
+    };
+  };
+
+  const out = {};
+  out.asIs_112 = probeBox(112, '');
+  out.lh1_112 = probeBox(112, 'line-height:1;');
+  out.lh1_88 = probeBox(88, 'line-height:1;');
+  document.getElementById('out').textContent = JSON.stringify(out, null, 2);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8" /><style>html,body{margin:0;padding:0;background:#000}iframe{border:0;display:block}</style></head>
+<body>
+<script>
+const p = new URLSearchParams(location.search);
+const W = +(p.get('w') || 360);
+const H = +(p.get('h') || 740);
+const clickAt = p.get('click') === null ? null : +p.get('click');
+
+const f = document.createElement('iframe');
+f.width = W;
+f.height = H;
+f.src = '/';
+document.body.appendChild(f);
+
+if (clickAt !== null) {
+  f.addEventListener('load', () => {
+    setTimeout(() => {
+      try {
+        const overlay = f.contentDocument.querySelector('[role="presentation"]');
+        if (overlay) overlay.click();
+        else document.title = 'NO_OVERLAY';
+      } catch (e) {
+        document.title = 'ERR:' + e.message;
+      }
+    }, clickAt);
+  });
+}
+</script>
+</body>
+</html>

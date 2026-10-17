@@ -192,18 +192,6 @@ function DoorPanel({ side, opened, duration }) {
         }}
       />
 
-      {/* carved panel outline, like an inlaid door leaf */}
-      <div
-        className={`absolute inset-y-[7%] w-[58%] rounded-sm border border-gold/25 ${
-          isLeft ? 'right-[9%]' : 'left-[9%]'
-        }`}
-      />
-      <div
-        className={`absolute inset-y-[7%] w-[58%] rounded-sm border border-gold/12 ${
-          isLeft ? 'right-[12%]' : 'left-[12%]'
-        }`}
-      />
-
       {/* vertical carved grain */}
       <div
         className="absolute inset-0 opacity-50"
