@@ -140,7 +140,7 @@ export const events = [
     tamilDate: 'ஐப்பசி 11, புதன்கிழமை',
     time: 'காலை 9:00–10:30 மணி',
     timeEnglish: '9:00–10:30 AM',
-    venue: '[VENUE / ADDRESS – fill in]',
+    venue: 'இல்லம்',
   },
   {
     id: 'nichayathartham',
