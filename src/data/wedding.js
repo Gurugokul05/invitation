@@ -30,7 +30,7 @@ export const music = {
 export const meta = {
   // Set this to your live URL after deploying to Vercel. Also update the
   // matching <meta og:*> tags in index.html.
-  siteUrl: 'https://YOUR-DOMAIN.vercel.app',
+  siteUrl: 'https://sakthikumar-invitation.vercel.app/',
   title: 'அன்புடன் அழைக்கிறோம் — SakthiKumar weds Aruneswari',
 };
 

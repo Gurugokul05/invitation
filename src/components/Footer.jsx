@@ -1,12 +1,9 @@
-import { useState } from 'react';
 import Section from './ui/Section.jsx';
 import Reveal from './ui/Reveal.jsx';
 import { Kuthuvilakku, Lotus, MangoLeafToran } from './motifs/index.js';
 import { footer, meta } from '../data/wedding.js';
 
 export default function Footer() {
-  const [copyState, setCopyState] = useState('idle');
-
   const share = async () => {
     const text = `${footer.shareText} ${meta.siteUrl}`;
 
@@ -21,24 +18,6 @@ export default function Footer() {
 
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
   };
-
-  const copyLink = async () => {
-    try {
-      await navigator.clipboard.writeText(meta.siteUrl);
-      setCopyState('copied');
-    } catch {
-      // clipboard is blocked (http, or permission denied) — say so rather than
-      // leaving the guest wondering whether the tap registered
-      setCopyState('failed');
-    }
-    window.setTimeout(() => setCopyState('idle'), 2400);
-  };
-
-  const copyLabel = {
-    idle: 'இணைப்பை நகலெடு',
-    copied: 'நகலெடுக்கப்பட்டது ✓',
-    failed: 'நகலெடுக்க இயலவில்லை',
-  }[copyState];
 
   return (
     <Section id="footer" tone="deep" divider zari={false}>
@@ -95,10 +74,6 @@ export default function Footer() {
                 />
               </svg>
               <span className="font-tamil">அழைப்பிதழைப் பகிர்</span>
-            </button>
-
-            <button type="button" onClick={copyLink} className="btn-outline w-full border-gold/70 bg-transparent text-turmeric sm:w-auto">
-              <span className="font-tamil text-sm">{copyLabel}</span>
             </button>
           </Reveal>
 

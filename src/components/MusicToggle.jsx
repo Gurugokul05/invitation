@@ -16,7 +16,8 @@ export default function MusicToggle({ available, isPlaying, onToggle, label = '�
       transition={{ delay: 0.6, duration: 0.5 }}
       aria-label={isPlaying ? `${label} — இசையை நிறுத்து` : `${label} — இசையை இயக்கு`}
       aria-pressed={isPlaying}
-      className="pb-safe fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center
+      style={{ bottom: 'calc(1rem + env(safe-area-inset-bottom, 0px))' }}
+      className="fixed right-4 z-40 flex h-12 w-12 items-center justify-center
                  rounded-full border border-gold/70 bg-maroon/92 text-turmeric shadow-gold
                  backdrop-blur-sm active:scale-95 sm:h-14 sm:w-14"
     >
