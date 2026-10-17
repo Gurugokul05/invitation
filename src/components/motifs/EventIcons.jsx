@@ -72,7 +72,25 @@ const Feast = () => (
   </>
 );
 
+const Kaal = () => (
+  <>
+    <path
+      d="M24 13 C 25 6, 32 4, 34 7 C 29 9, 26 11, 24 13 Z"
+      fill="#2F6B3A"
+      fillOpacity="0.3"
+    />
+    <path d="M20 20 C 19 14, 29 14, 28 20 Z" />
+    <path d="M21 14 L21 11.5 M27 14 L27 11.5" />
+    <path d="M21 11.5 L27 11.5" />
+    <circle cx="24" cy="9.4" r="1.6" fill="#E8B923" fillOpacity="0.85" stroke="none" />
+    <path d="M21 20 L21 42 M27 20 L27 42" />
+    <path d="M19.5 27 L28.5 27 M19.5 35 L28.5 35" strokeOpacity="0.65" />
+    <path d="M15 42 L33 42" />
+  </>
+);
+
 const ICONS = {
+  kaal: Kaal,
   ring: Ring,
   turmeric: Turmeric,
   mehendi: Mehendi,

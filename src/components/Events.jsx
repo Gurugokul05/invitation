@@ -14,17 +14,24 @@ export default function Events() {
         />
 
         <ol className="relative mt-10 space-y-5 pl-16 sm:pl-24">
-          {/* the kolam spine */}
-          <span
-            className="absolute left-[26px] top-3 bottom-3 w-[2px] rounded-full bg-gradient-to-b from-gold/20 via-gold/70 to-gold/20 sm:left-[42px]"
-            aria-hidden="true"
-          />
-
           {events.map((event, index) => {
             const highlight = event.id === 'muhurtham';
+            const isLast = index === events.length - 1;
 
             return (
               <li key={event.id} className="relative">
+                {/* the kolam spine — a per-item segment that runs down the
+                    centre of the icon column, from this icon to the next, and
+                    stops at the last icon. Offsets/width mirror the circle so
+                    the line always passes through the icons. */}
+                {!isLast && (
+                  <span
+                    className="pointer-events-none absolute -left-16 top-7 -bottom-12 flex w-12 justify-center sm:-left-24 sm:top-8 sm:-bottom-[52px] sm:w-14"
+                    aria-hidden="true"
+                  >
+                    <span className="h-full w-[2px] rounded-full bg-gold/70" />
+                  </span>
+                )}
                 <Reveal delay={index * 0.06} x={18} y={14}>
                   {/* node on the spine */}
                   <span

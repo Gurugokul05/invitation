@@ -50,15 +50,15 @@ export const muhurtham = {
 /* ---------------------------------------------------------------- COUPLE */
 export const couple = {
   groom: {
-    nameTamil: 'எம். சக்திகுமார்',
+    nameTamil: 'ம. சக்திகுமார்',
     nameEnglish: 'M. SakthiKumar',
     // Still a placeholder — replace with the groom's actual parents.
-    parents: 'எஸ். மகாராஜன் & எம். சபரிமணி, எம். தங்கமாரி அவர்களின் மகன்',
+    parents: 'சு. மகாராஜன் & ம. சபரிமணி, ம. தங்கமாரி அவர்களின் மகன்',
     parentsEnglish: 'Son of Mr. S. Maharajan & Mrs. M. Sabarimani,Mrs. M. Thangamari',
     line: '',
   },
   bride: {
-    nameTamil: 'எஸ். அருணேஸ்வரி',
+    nameTamil: 'சே. அருணேஸ்வரி',
     nameEnglish: 'S. Aruneswari',
     // Still a placeholder — replace with the bride's actual parents.
     parents: 'அ. சேங்கை & சே. நித்யா அவர்களின் மகள்',
@@ -78,13 +78,12 @@ export const hero = {
   tagline: 'இரு மனம் இணையும் திருநாள்',
   taglineEnglish: 'The auspicious day two hearts become one',
   // Big line under the names.
-  blessing: 'ஸ்ரீ தண்டீஸ்வர அய்யனார் துணை',
+  blessing: 'அன்பிற்கும் உண்டோ அடைக்கும் தாழ்!',
 };
 
 /* -------------------------------------------------------------- OPENING */
 export const opening = {
-  sloka: 'ஸ்ரீ தண்டீஸ்வர அய்யனார் துணை',
-  slokaMeaning: 'Salutations to Thandisvara Ayyanar',
+  
   cta: 'அழைப்பிதழைத் திறக்க',
   ctaEnglish: 'Tap to open the invitation',
   // The music pill under the button. Tapping it switches the nadaswaram on or
@@ -105,7 +104,7 @@ export const invitation = {
   ],
   // The family signing the invitation.
   hosts: {
-    tamil: 'எஸ். மகாராஜன் & எம். சபரிமணி, எம். தங்கமாரி',
+    tamil: 'சு. மகாராஜன் & ம. சபரிமணி, ம. தங்கமாரி',
     english: 'S. Maharajan & M. Sabarimani, M. Thangamari',
   },
 };
@@ -129,10 +128,20 @@ export const countdown = {
 };
 
 /* ----------------------------------------------------------------- EVENTS */
-// `icon` must be one of: ring | turmeric | mehendi | garland | lamp | feast
+// `icon` must be one of: kaal | ring | turmeric | mehendi | garland | lamp | feast
 // NOTE: the Tamil calendar (panchangam) dates below are placeholders —
 // copy the exact thithi / nakshatram wording from your family's panchangam.
 export const events = [
+  {
+    id: 'muhurthakaal',
+    icon: 'kaal',
+    title: { tamil: 'முகூர்த்தக்கால்', english: 'Muhurtha Kaal' },
+    date: '28 October 2026',
+    tamilDate: 'ஐப்பசி 11, புதன்கிழமை',
+    time: 'காலை 9:00–10:30 மணி',
+    timeEnglish: '9:00–10:30 AM',
+    venue: '[VENUE / ADDRESS – fill in]',
+  },
   {
     id: 'nichayathartham',
     icon: 'ring',
@@ -151,7 +160,7 @@ export const events = [
     tamilDate: 'ஐப்பசி 15, ஞாயிற்றுக்கிழமை',
     time: 'காலை 10:30 மணி',
     timeEnglish: '10:30 AM',
-    venue: 'ஏ.எஸ். அபிஷேக் திருமண மஹால், குருக்கல்பட்டி',
+    venue: 'மேலமந்திலநல்லூர், அருள்மிகு ஸ்ரீ சிவஞான வெள்ளியப்பர் சாஸ்தா திருக்கோவில்',
   },
   {
     id: 'sappadu',
@@ -159,8 +168,8 @@ export const events = [
     title: { tamil: 'விருந்து', english: 'Wedding Feast' },
     date: '1 November 2026',
     tamilDate: 'ஐப்பசி 15, ஞாயிற்றுக்கிழமை',
-    time: 'பகல் 12:30 மணி',
-    timeEnglish: '12:30 PM',
+    time: 'பகல் 11:00 மணி',
+    timeEnglish: '11:00 PM',
     venue: 'இலை விருந்து · ஏ.எஸ். அபிஷேக் திருமண மஹால்',
   },
 ];
@@ -171,15 +180,16 @@ export const venue = {
   name: 'ஏ.எஸ். அபிஷேக் திருமண மஹால்',
   nameEnglish: 'AS Abishek Marriage Mahal',
   // Shown line by line.
-  addressTamil: ['எஸ்.எச்-41, புளியங்குடி – திருநெல்வேலி சாலை', 'குருக்கல்பட்டி, திருநெல்வேலி – 627 953', 'தமிழ்நாடு'],
+  addressTamil: ['எஸ்.எச்-41, சங்கரன் கோவில் – திருநெல்வேலி சாலை', 'குருக்கல்பட்டி, திருநெல்வேலி – 627 953', 'தமிழ்நாடு'],
   addressEnglish: ['SH-41, Puliangudi – Tirunelveli Road', 'Kurukkal Patti, Tirunelveli – 627 953', 'Tamil Nadu'],
   // Placeholder — put the family's contact number here.
   phone: '+91 63857 80907',
   // Coordinates taken from the venue's own Google Maps listing:
-  // https://maps.app.goo.gl/atSdCUX2DLYpbdkf6
+  // https://maps.app.goo.gl/mJBFPQ58GuCtUKP18
   // A maps.app.goo.gl short link cannot be used as an iframe src, so the embed
   // uses the resolved lat/lng instead. Works without an API key.
-  mapEmbed: 'https://www.google.com/maps?q=9.104674,77.585337&z=16&output=embed',
+  // `t=k` forces the satellite layer (t=h would be hybrid, with labels).
+  mapEmbed: 'https://www.google.com/maps?q=9.104674,77.585337&z=16&t=k&output=embed',
   // "Get Directions" destination — same exact pin.
   mapDirections: 'https://www.google.com/maps/dir/?api=1&destination=9.104674%2C77.585337',
   note: 'மண்டபத்தில் வாகன நிறுத்த வசதி உள்ளது',
@@ -231,7 +241,7 @@ export const footer = {
   blessingEnglish: 'Your presence is our greatest joy',
   regards: 'இப்படிக்கு',
   regardsEnglish: 'With regards',
-  families: ['எஸ். மகாராஜன்', 'அ. சேங்கை'],
+  families: ['சு. மகாராஜன்', 'அ. சேங்கை'],
   familiesEnglish: ['S. Maharajan', 'A. Sengai'],
   // Used by the WhatsApp "share this invitation" button.
   shareText:
