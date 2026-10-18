@@ -160,7 +160,7 @@ export const events = [
     tamilDate: 'ஐப்பசி 15, ஞாயிற்றுக்கிழமை',
     time: 'காலை 10:30 மணி',
     timeEnglish: '10:30 AM',
-    venue: 'மேலமந்திலநல்லூர், அருள்மிகு ஸ்ரீ சிவஞான வெள்ளியப்பர் சாஸ்தா திருக்கோவில்',
+    venue: 'மேலநீலிதநல்லூர், அருள்மிகு ஸ்ரீ சிவஞான வெளியப்பர் சாஸ்தா திருக்கோவில்',
   },
   {
     id: 'sappadu',
@@ -181,7 +181,7 @@ export const venue = {
   nameEnglish: 'AS Abishek Marriage Mahal',
   // Shown line by line.
   addressTamil: ['எஸ்.எச்-41, சங்கரன் கோவில் – திருநெல்வேலி சாலை', 'குருக்கல்பட்டி, திருநெல்வேலி – 627 953', 'தமிழ்நாடு'],
-  addressEnglish: ['SH-41, Puliangudi – Tirunelveli Road', 'Kurukkal Patti, Tirunelveli – 627 953', 'Tamil Nadu'],
+  addressEnglish: ['SH-41, Sankaran Kovil – Tirunelveli Road', 'Kurukkal Patti, Tirunelveli – 627 953', 'Tamil Nadu'],
   // Placeholder — put the family's contact number here.
   phone: '+91 63857 80907',
   // Coordinates taken from the venue's own Google Maps listing:
