@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import Section from './ui/Section.jsx';
 import SectionHeading from './ui/SectionHeading.jsx';
 import Reveal from './ui/Reveal.jsx';
@@ -6,6 +7,39 @@ import Gopuram from './motifs/Gopuram.jsx';
 import { venue } from '../data/wedding.js';
 
 export default function Venue() {
+  // Google only fills in "Your location" as the origin on the mobile app. On the
+  // desktop web the destination link opens with an empty "from" field, so ask the
+  // browser for the guest's position and append it as the origin. If the position
+  // is unavailable or denied, the plain destination link still works.
+  const handleDirections = useCallback((event) => {
+    if (
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey ||
+      !navigator.geolocation
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+    const tab = window.open(venue.mapDirections, '_blank');
+    if (!tab) {
+      window.location.href = venue.mapDirections;
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        const origin = encodeURIComponent(`${coords.latitude},${coords.longitude}`);
+        tab.location.replace(`${venue.mapDirections}&origin=${origin}&travelmode=driving`);
+      },
+      () => {},
+      { enableHighAccuracy: true, timeout: 6000, maximumAge: 300000 },
+    );
+  }, []);
+
   return (
     <Section id="venue" tone="deep">
       <div className="relative overflow-hidden">
@@ -108,6 +142,7 @@ export default function Venue() {
               href={venue.mapDirections}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleDirections}
               className="btn-gold w-full max-w-xs sm:w-auto"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
